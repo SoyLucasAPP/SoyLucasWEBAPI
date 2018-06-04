@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ELScoringValidacionReglasDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nTipoScoring" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="oDocumento" nillable="true" type="tns:ELDocumento" />
+      <xs:element minOccurs="0" name="oProducto" nillable="true" type="tns:ELProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELScoringValidacionReglasDatos" nillable="true" type="tns:ELScoringValidacionReglasDatos" />
+  <xs:complexType name="ELDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nTipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sNroDoc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELDocumento" nillable="true" type="tns:ELDocumento" />
+  <xs:complexType name="ELProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nModalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nProducto" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELProducto" nillable="true" type="tns:ELProducto" />
+  <xs:complexType name="ELScoringValidacionReglasResultado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nIdRechazo" type="xs:int" />
+      <xs:element minOccurs="0" name="sDescRechazo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sMensajeError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELScoringValidacionReglasResultado" nillable="true" type="tns:ELScoringValidacionReglasResultado" />
+  <xs:complexType name="ELClientePEPResultado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bEsPEP" type="xs:boolean" />
+      <xs:element minOccurs="0" name="oError" nillable="true" type="tns:ELError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELClientePEPResultado" nillable="true" type="tns:ELClientePEPResultado" />
+  <xs:complexType name="ELError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sMensajeError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELError" nillable="true" type="tns:ELError" />
+</xs:schema>

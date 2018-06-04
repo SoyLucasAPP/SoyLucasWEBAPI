@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.19.150.16:1711/wsScoreDemografico.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" />
+  <xs:element name="ScoreDemografico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="poDatosScore" nillable="true" type="q1:ELScoreDemograficoDatos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScoreDemograficoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="ScoreDemograficoResult" nillable="true" type="q2:ELScoreDemograficoResultado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevuelveMoraComercial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="poDatosPersona" nillable="true" type="q3:ELDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DevuelveMoraComercialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DevuelveMoraComercialResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="15b0efd0-b068-43e7-a6a8-b816bf4fffd5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.19.150.16:1711/wsScoreComportamiento.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsScoreComportamiento3.xsd" MetadataType="Schema" ID="ab6231dd-7900-454a-86e0-57d174e8d285" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreComportamiento.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsScoreComportamiento31.xsd" MetadataType="Schema" ID="045a630f-2c76-4b64-8313-7dbe9d8805ea" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreComportamiento.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsScoreComportamiento1.wsdl" MetadataType="Wsdl" ID="f6f37dff-1494-45ec-a668-4df7198484e8" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreComportamiento.svc?wsdl" />
+    <MetadataFile FileName="wsScoreComportamiento32.xsd" MetadataType="Schema" ID="10a3ebbd-af40-445c-b93b-fbf948dba3d0" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreComportamiento.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsScoreComportamiento1.disco" MetadataType="Disco" ID="2ed84312-ff1b-435c-95ce-267c3f26651b" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreComportamiento.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

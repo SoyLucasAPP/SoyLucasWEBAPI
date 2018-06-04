@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3a03b844-cfeb-4462-8bd7-7a0807440135" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.19.150.16:1711/wsPreAprobacion.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsPreAprobacion3.xsd" MetadataType="Schema" ID="4fcb46bd-d3df-46e4-a0c2-a1b9dec72983" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsPreAprobacion.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsPreAprobacion1.wsdl" MetadataType="Wsdl" ID="ba9478fb-3acd-4388-a99e-a9cad764b0f2" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsPreAprobacion.svc?wsdl" />
+    <MetadataFile FileName="wsPreAprobacion31.xsd" MetadataType="Schema" ID="ba4a36a7-5675-4b9e-ac5e-9ccb34df9517" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsPreAprobacion.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsPreAprobacion1.disco" MetadataType="Disco" ID="d2908668-33d9-4f58-8c5e-ce9e4dbdd760" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsPreAprobacion.svc?disco" />
+    <MetadataFile FileName="wsPreAprobacion32.xsd" MetadataType="Schema" ID="2afd4475-39ad-4b0b-9f79-b828baada8dd" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsPreAprobacion.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

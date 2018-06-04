@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ELIngresoPredecidoDemograficoDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nConstante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nEdad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nEstadoCivil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nGenero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sCIIU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sUbiGeo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELIngresoPredecidoDemograficoDatos" nillable="true" type="tns:ELIngresoPredecidoDemograficoDatos" />
+  <xs:complexType name="ELIngresoPredecidoDemograficoResultado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PuntajeIPDItems" nillable="true" type="tns:ArrayOfPuntajeIPDItems" />
+      <xs:element minOccurs="0" name="bError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nIngresoPredecidoDemografico1" type="xs:double" />
+      <xs:element minOccurs="0" name="nIngresoPredecidoDemografico2" type="xs:double" />
+      <xs:element minOccurs="0" name="nIngresoPredecidoDemografico3" type="xs:double" />
+      <xs:element minOccurs="0" name="sMensajeError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELIngresoPredecidoDemograficoResultado" nillable="true" type="tns:ELIngresoPredecidoDemograficoResultado" />
+  <xs:complexType name="ArrayOfPuntajeIPDItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PuntajeIPDItems" nillable="true" type="tns:PuntajeIPDItems" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPuntajeIPDItems" nillable="true" type="tns:ArrayOfPuntajeIPDItems" />
+  <xs:complexType name="PuntajeIPDItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nVariablePuntaje" type="xs:double" />
+      <xs:element minOccurs="0" name="sVariable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sVariableDescripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PuntajeIPDItems" nillable="true" type="tns:PuntajeIPDItems" />
+  <xs:complexType name="ELIngresoPredecidoRCCDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nEstadoCivil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="oDocumentoConyuge" nillable="true" type="tns:ELDocumento" />
+      <xs:element minOccurs="0" name="oDocumentoTitular" nillable="true" type="tns:ELDocumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELIngresoPredecidoRCCDatos" nillable="true" type="tns:ELIngresoPredecidoRCCDatos" />
+  <xs:complexType name="ELDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nTipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sNroDoc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELDocumento" nillable="true" type="tns:ELDocumento" />
+  <xs:complexType name="ELIngresoPredecidoRCCResultado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Deudas" nillable="true" type="tns:ArrayOfDeudaRCCItems" />
+      <xs:element minOccurs="0" name="bError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nIngresoPredecidoRCC1" type="xs:double" />
+      <xs:element minOccurs="0" name="nIngresoPredecidoRCC2" type="xs:double" />
+      <xs:element minOccurs="0" name="nIngresoPredecidoRCC3" type="xs:double" />
+      <xs:element minOccurs="0" name="sMensajeError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELIngresoPredecidoRCCResultado" nillable="true" type="tns:ELIngresoPredecidoRCCResultado" />
+  <xs:complexType name="ArrayOfDeudaRCCItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeudaRCCItems" nillable="true" type="tns:DeudaRCCItems" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeudaRCCItems" nillable="true" type="tns:ArrayOfDeudaRCCItems" />
+  <xs:complexType name="DeudaRCCItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nFactor" type="xs:double" />
+      <xs:element minOccurs="0" name="nInferencia" type="xs:double" />
+      <xs:element minOccurs="0" name="nMonto" type="xs:double" />
+      <xs:element minOccurs="0" name="nTipoId" type="xs:int" />
+      <xs:element minOccurs="0" name="sCaracteristica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sTipoDescripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeudaRCCItems" nillable="true" type="tns:DeudaRCCItems" />
+  <xs:complexType name="ELIngresoPredecidoDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nIngresoPredecidoDemografico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nIngresoPredecidoRCC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="oDatosDemografico" nillable="true" type="tns:ELIngresoPredecidoDemograficoDatos" />
+      <xs:element minOccurs="0" name="oDatosRCC" nillable="true" type="tns:ELIngresoPredecidoRCCDatos" />
+      <xs:element minOccurs="0" name="oDocumentoTitular" nillable="true" type="tns:ELDocumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELIngresoPredecidoDatos" nillable="true" type="tns:ELIngresoPredecidoDatos" />
+  <xs:complexType name="ELIngresoPredecidoResultado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nIngresoPredecidoFinal1" type="xs:double" />
+      <xs:element minOccurs="0" name="nIngresoPredecidoFinal2" type="xs:double" />
+      <xs:element minOccurs="0" name="sMensajeError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELIngresoPredecidoResultado" nillable="true" type="tns:ELIngresoPredecidoResultado" />
+  <xs:complexType name="ELIngresoCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nIngresoDeclarado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nIngresoFinal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nIngresoPredecido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="oError" nillable="true" type="tns:ELError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELIngresoCliente" nillable="true" type="tns:ELIngresoCliente" />
+  <xs:complexType name="ELError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sMensajeError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELError" nillable="true" type="tns:ELError" />
+</xs:schema>

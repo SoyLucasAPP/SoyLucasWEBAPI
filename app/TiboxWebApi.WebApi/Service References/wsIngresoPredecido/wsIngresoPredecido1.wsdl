@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="wsIngresoPredecido" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.19.150.16:1711/wsIngresoPredecido.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.19.150.16:1711/wsIngresoPredecido.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.19.150.16:1711/wsIngresoPredecido.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IngresoPredecido_IngresoPredecidoDemografico_InputMessage">
+    <wsdl:part name="parameters" element="tns:IngresoPredecidoDemografico" />
+  </wsdl:message>
+  <wsdl:message name="IngresoPredecido_IngresoPredecidoDemografico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IngresoPredecidoDemograficoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IngresoPredecido_IngresoPredecidoRCC_InputMessage">
+    <wsdl:part name="parameters" element="tns:IngresoPredecidoRCC" />
+  </wsdl:message>
+  <wsdl:message name="IngresoPredecido_IngresoPredecidoRCC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IngresoPredecidoRCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="IngresoPredecido_IngresoPredecido_InputMessage">
+    <wsdl:part name="parameters" element="tns:IngresoPredecido" />
+  </wsdl:message>
+  <wsdl:message name="IngresoPredecido_IngresoPredecido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IngresoPredecidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IngresoPredecido_IngresoPredecidoVsIngresoDeclarado_InputMessage">
+    <wsdl:part name="parameters" element="tns:IngresoPredecidoVsIngresoDeclarado" />
+  </wsdl:message>
+  <wsdl:message name="IngresoPredecido_IngresoPredecidoVsIngresoDeclarado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IngresoPredecidoVsIngresoDeclaradoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IngresoPredecido">
+    <wsdl:operation name="IngresoPredecidoDemografico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IngresoPredecido/IngresoPredecidoDemografico" message="tns:IngresoPredecido_IngresoPredecidoDemografico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IngresoPredecido/IngresoPredecidoDemograficoResponse" message="tns:IngresoPredecido_IngresoPredecidoDemografico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IngresoPredecidoRCC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IngresoPredecido/IngresoPredecidoRCC" message="tns:IngresoPredecido_IngresoPredecidoRCC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IngresoPredecido/IngresoPredecidoRCCResponse" message="tns:IngresoPredecido_IngresoPredecidoRCC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IngresoPredecido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IngresoPredecido/IngresoPredecido" message="tns:IngresoPredecido_IngresoPredecido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IngresoPredecido/IngresoPredecidoResponse" message="tns:IngresoPredecido_IngresoPredecido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IngresoPredecidoVsIngresoDeclarado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IngresoPredecido/IngresoPredecidoVsIngresoDeclarado" message="tns:IngresoPredecido_IngresoPredecidoVsIngresoDeclarado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IngresoPredecido/IngresoPredecidoVsIngresoDeclaradoResponse" message="tns:IngresoPredecido_IngresoPredecidoVsIngresoDeclarado_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IngresoPredecido" type="tns:IngresoPredecido">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IngresoPredecidoDemografico">
+      <soap:operation soapAction="http://tempuri.org/IngresoPredecido/IngresoPredecidoDemografico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IngresoPredecidoRCC">
+      <soap:operation soapAction="http://tempuri.org/IngresoPredecido/IngresoPredecidoRCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IngresoPredecido">
+      <soap:operation soapAction="http://tempuri.org/IngresoPredecido/IngresoPredecido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IngresoPredecidoVsIngresoDeclarado">
+      <soap:operation soapAction="http://tempuri.org/IngresoPredecido/IngresoPredecidoVsIngresoDeclarado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsIngresoPredecido">
+    <wsdl:port name="BasicHttpBinding_IngresoPredecido" binding="tns:BasicHttpBinding_IngresoPredecido">
+      <soap:address location="http://10.19.150.16:1711/wsIngresoPredecido.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

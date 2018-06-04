@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.19.150.16:1711/wsIngresoPredecido.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" />
+  <xs:element name="IngresoPredecidoDemografico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="poDatosIngresoPredecido" nillable="true" type="q1:ELIngresoPredecidoDemograficoDatos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IngresoPredecidoDemograficoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="IngresoPredecidoDemograficoResult" nillable="true" type="q2:ELIngresoPredecidoDemograficoResultado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IngresoPredecidoRCC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="poDatosIngresoPredecido" nillable="true" type="q3:ELIngresoPredecidoRCCDatos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IngresoPredecidoRCCResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="IngresoPredecidoRCCResult" nillable="true" type="q4:ELIngresoPredecidoRCCResultado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IngresoPredecido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="poDatosIngresoPredecido" nillable="true" type="q5:ELIngresoPredecidoDatos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IngresoPredecidoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="IngresoPredecidoResult" nillable="true" type="q6:ELIngresoPredecidoResultado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IngresoPredecidoVsIngresoDeclarado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="poDatoIngresos" nillable="true" type="q7:ELIngresoCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IngresoPredecidoVsIngresoDeclaradoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="IngresoPredecidoVsIngresoDeclaradoResult" nillable="true" type="q8:ELIngresoCliente" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

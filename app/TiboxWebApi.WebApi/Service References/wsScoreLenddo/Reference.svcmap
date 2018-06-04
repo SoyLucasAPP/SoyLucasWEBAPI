@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f3d1546f-216b-4dd8-9010-fab34b6bd646" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.19.150.16:1711/wsScoreLenddo.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsScoreLenddo1.disco" MetadataType="Disco" ID="4c5867ca-6c09-4def-b209-833603d85d75" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreLenddo.svc?disco" />
+    <MetadataFile FileName="wsScoreLenddo3.xsd" MetadataType="Schema" ID="487b253e-cd40-4961-92a5-42aeb13cf8f3" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreLenddo.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsScoreLenddo31.xsd" MetadataType="Schema" ID="17dd0344-8c35-4d78-bb45-4ab9ef7235b4" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreLenddo.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsScoreLenddo32.xsd" MetadataType="Schema" ID="fab59543-da38-4949-96b8-fff8182d77c6" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreLenddo.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsScoreLenddo1.wsdl" MetadataType="Wsdl" ID="d0113262-8a04-4ca5-ae93-680829a55742" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsScoreLenddo.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

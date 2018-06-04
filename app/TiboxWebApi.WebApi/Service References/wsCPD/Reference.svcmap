@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2216dcdd-e39c-49eb-9f3c-cad7c19e4156" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.19.150.16:1711/wsCPD.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsCPD3.xsd" MetadataType="Schema" ID="d808cac8-d245-4bd0-a7b0-4dc7cb5a44c0" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsCPD.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsCPD31.xsd" MetadataType="Schema" ID="855effe9-a1e9-4f86-9925-2a8104561363" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsCPD.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsCPD1.disco" MetadataType="Disco" ID="48bc6d24-959e-46a4-9886-6cac4eb7d8f4" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsCPD.svc?disco" />
+    <MetadataFile FileName="wsCPD1.wsdl" MetadataType="Wsdl" ID="3c0d1bdc-6f09-46bf-ab5b-b91a82ec58bf" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsCPD.svc?wsdl" />
+    <MetadataFile FileName="wsCPD32.xsd" MetadataType="Schema" ID="a6671c6f-e84e-4ff5-9290-05d66a9e436d" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsCPD.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

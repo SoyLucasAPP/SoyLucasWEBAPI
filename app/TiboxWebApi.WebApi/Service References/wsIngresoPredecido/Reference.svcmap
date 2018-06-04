@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="29c1fddc-c523-4847-baf0-5bcd755bf853" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.19.150.16:1711/wsIngresoPredecido.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsIngresoPredecido1.disco" MetadataType="Disco" ID="69709c31-9ae9-459b-b095-ba6a089d6eac" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsIngresoPredecido.svc?disco" />
+    <MetadataFile FileName="wsIngresoPredecido3.xsd" MetadataType="Schema" ID="39cb4620-9acd-4894-b84a-a56d80912075" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsIngresoPredecido.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsIngresoPredecido31.xsd" MetadataType="Schema" ID="1ae08bf9-a081-46fc-a58d-5eaf80795872" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsIngresoPredecido.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsIngresoPredecido1.wsdl" MetadataType="Wsdl" ID="7fd011f3-7378-483f-99e5-124a02451345" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsIngresoPredecido.svc?wsdl" />
+    <MetadataFile FileName="wsIngresoPredecido32.xsd" MetadataType="Schema" ID="822e9f66-30c7-461d-b9c8-0f1df0658ba6" SourceId="1" SourceUrl="http://10.19.150.16:1711/wsIngresoPredecido.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

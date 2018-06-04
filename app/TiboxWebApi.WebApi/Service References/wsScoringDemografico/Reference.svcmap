@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7b5bf311-bb06-48fb-b7e8-a648a7eefc2f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.19.150.20:3000/wsScoringDemografico.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wsScoringDemografico.xsd" MetadataType="Schema" ID="fcc19111-2265-42aa-8bc8-90a5928c67f2" SourceId="1" SourceUrl="http://10.19.150.20:3000/wsScoringDemografico.svc?xsd=xsd0" />
+    <MetadataFile FileName="wsScoringDemografico1.xsd" MetadataType="Schema" ID="48e02797-388c-432b-9271-02f58970a18f" SourceId="1" SourceUrl="http://10.19.150.20:3000/wsScoringDemografico.svc?xsd=xsd1" />
+    <MetadataFile FileName="wsScoringDemografico2.xsd" MetadataType="Schema" ID="4df48191-f929-4b2d-8fc6-9e140a8a0e77" SourceId="1" SourceUrl="http://10.19.150.20:3000/wsScoringDemografico.svc?xsd=xsd2" />
+    <MetadataFile FileName="wsScoringDemografico.wsdl" MetadataType="Wsdl" ID="d796aade-7894-409d-85f9-a2d21d7d1226" SourceId="1" SourceUrl="http://10.19.150.20:3000/wsScoringDemografico.svc?wsdl" />
+    <MetadataFile FileName="wsScoringDemografico.disco" MetadataType="Disco" ID="d15dff0d-fb79-4016-befa-180623f1fc0b" SourceId="1" SourceUrl="http://10.19.150.20:3000/wsScoringDemografico.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

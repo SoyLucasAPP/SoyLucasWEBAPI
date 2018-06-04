@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ELScoringBuroCuotaUtilizadaDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nEstadoCivil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="oDocumentoConyuge" nillable="true" type="tns:ELDocumento" />
+      <xs:element minOccurs="0" name="oDocumentoTitular" nillable="true" type="tns:ELDocumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELScoringBuroCuotaUtilizadaDatos" nillable="true" type="tns:ELScoringBuroCuotaUtilizadaDatos" />
+  <xs:complexType name="ELDocumento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nTipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sNroDoc" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELDocumento" nillable="true" type="tns:ELDocumento" />
+  <xs:complexType name="ELScoringBuroCuotaUtilizadaResultado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatosCuotaUtilizada" nillable="true" type="tns:ArrayOfCuotaUtilizadaItems" />
+      <xs:element minOccurs="0" name="bError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nCuotaUtilizada" type="xs:double" />
+      <xs:element minOccurs="0" name="sMensajeError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELScoringBuroCuotaUtilizadaResultado" nillable="true" type="tns:ELScoringBuroCuotaUtilizadaResultado" />
+  <xs:complexType name="ArrayOfCuotaUtilizadaItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CuotaUtilizadaItems" nillable="true" type="tns:CuotaUtilizadaItems" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCuotaUtilizadaItems" nillable="true" type="tns:ArrayOfCuotaUtilizadaItems" />
+  <xs:complexType name="CuotaUtilizadaItems">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nCuota" type="xs:double" />
+      <xs:element minOccurs="0" name="nFactorUtilizacion" type="xs:double" />
+      <xs:element minOccurs="0" name="nMonto" type="xs:double" />
+      <xs:element minOccurs="0" name="nPlazo" type="xs:int" />
+      <xs:element minOccurs="0" name="nTasa" type="xs:double" />
+      <xs:element minOccurs="0" name="nTipoId" type="xs:int" />
+      <xs:element minOccurs="0" name="sTipoDescripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CuotaUtilizadaItems" nillable="true" type="tns:CuotaUtilizadaItems" />
+  <xs:complexType name="ELScoringBuroDatos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nCuotaUtilizada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nGarantia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nIngresoPredecido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nModalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nModalidadLaboral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nMoraComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nScore" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nScoreOtros" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nTipoFormalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="oDocumentoTitual" nillable="true" type="tns:ELDocumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELScoringBuroDatos" nillable="true" type="tns:ELScoringBuroDatos" />
+  <xs:complexType name="ELScoringBuroResultado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bError" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nCategoria" type="xs:int" />
+      <xs:element minOccurs="0" name="nCuotaDisponible" type="xs:double" />
+      <xs:element minOccurs="0" name="nCuotaMaxima" type="xs:double" />
+      <xs:element minOccurs="0" name="nCuotaUtilizada" type="xs:double" />
+      <xs:element minOccurs="0" name="nDecicion" type="xs:int" />
+      <xs:element minOccurs="0" name="nPlazo" type="xs:double" />
+      <xs:element minOccurs="0" name="nPorcGarantiaAvaluo" type="xs:double" />
+      <xs:element minOccurs="0" name="nPorcentajeInicial" type="xs:double" />
+      <xs:element minOccurs="0" name="nPrestamo1" type="xs:double" />
+      <xs:element minOccurs="0" name="nPrestamo2" type="xs:double" />
+      <xs:element minOccurs="0" name="nPrestamo3" type="xs:double" />
+      <xs:element minOccurs="0" name="nPrestamo4" type="xs:double" />
+      <xs:element minOccurs="0" name="nPrestamoMaximo" type="xs:double" />
+      <xs:element minOccurs="0" name="nPrestamoMinimo" type="xs:double" />
+      <xs:element minOccurs="0" name="nRCI" type="xs:double" />
+      <xs:element minOccurs="0" name="nRMA" type="xs:double" />
+      <xs:element minOccurs="0" name="nTasa" type="xs:double" />
+      <xs:element minOccurs="0" name="sDescripcionRechazo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="sMensajeError" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ELScoringBuroResultado" nillable="true" type="tns:ELScoringBuroResultado" />
+</xs:schema>

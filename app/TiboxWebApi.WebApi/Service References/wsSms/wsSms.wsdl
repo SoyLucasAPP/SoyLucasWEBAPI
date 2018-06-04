@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EnviarMensaje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMensajeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EnviarMensajeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnviarMensajeSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMensaje" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMensajeSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMensajeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsSMSSoap">
+    <wsdl:operation name="EnviarMensaje">
+      <wsdl:input message="tns:EnviarMensajeSoapIn" />
+      <wsdl:output message="tns:EnviarMensajeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsSMSSoap" type="tns:wsSMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarMensaje">
+      <soap:operation soapAction="http://tempuri.org/EnviarMensaje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsSMSSoap12" type="tns:wsSMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarMensaje">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMensaje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsSMS">
+    <wsdl:port name="wsSMSSoap" binding="tns:wsSMSSoap">
+      <soap:address location="http://10.19.150.196:1015/wsSms.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsSMSSoap12" binding="tns:wsSMSSoap12">
+      <soap12:address location="http://10.19.150.196:1015/wsSms.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

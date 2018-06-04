@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiboxWebApi.Models", "TiboxWebApi.Models\TiboxWebApi.Models.csproj", "{9673F9D3-067D-445C-8B46-9D87826296CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiboxWebApi.Repository", "TiboxWebApi.Repository\TiboxWebApi.Repository.csproj", "{39BDA918-9B10-409A-A67A-052C15331F74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiboxWebApi.UnitOfWork", "TiboxWebApi.UnitOfWork\TiboxWebApi.UnitOfWork.csproj", "{DE0277E0-B90E-4EF5-A4E9-A4414AEB356B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiboxWebApi.WebApi", "TiboxWebApi.WebApi\TiboxWebApi.WebApi.csproj", "{5505700D-4C4B-4D5B-91AB-F706DD21CD73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9673F9D3-067D-445C-8B46-9D87826296CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9673F9D3-067D-445C-8B46-9D87826296CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9673F9D3-067D-445C-8B46-9D87826296CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9673F9D3-067D-445C-8B46-9D87826296CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39BDA918-9B10-409A-A67A-052C15331F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39BDA918-9B10-409A-A67A-052C15331F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39BDA918-9B10-409A-A67A-052C15331F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39BDA918-9B10-409A-A67A-052C15331F74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE0277E0-B90E-4EF5-A4E9-A4414AEB356B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE0277E0-B90E-4EF5-A4E9-A4414AEB356B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE0277E0-B90E-4EF5-A4E9-A4414AEB356B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE0277E0-B90E-4EF5-A4E9-A4414AEB356B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5505700D-4C4B-4D5B-91AB-F706DD21CD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5505700D-4C4B-4D5B-91AB-F706DD21CD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5505700D-4C4B-4D5B-91AB-F706DD21CD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5505700D-4C4B-4D5B-91AB-F706DD21CD73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tbliddes03:2407/tfs/softbox%20web
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TiboxWebApi.Models\\TiboxWebApi.Models.csproj
+		SccProjectName1 = TiboxWebApi.Models
+		SccLocalPath1 = TiboxWebApi.Models
+		SccProjectUniqueName2 = TiboxWebApi.Repository\\TiboxWebApi.Repository.csproj
+		SccProjectName2 = TiboxWebApi.Repository
+		SccLocalPath2 = TiboxWebApi.Repository
+		SccProjectUniqueName3 = TiboxWebApi.UnitOfWork\\TiboxWebApi.UnitOfWork.csproj
+		SccProjectName3 = TiboxWebApi.UnitOfWork
+		SccLocalPath3 = TiboxWebApi.UnitOfWork
+		SccProjectUniqueName4 = TiboxWebApi.WebApi\\TiboxWebApi.WebApi.csproj
+		SccProjectName4 = TiboxWebApi.WebApi
+		SccLocalPath4 = TiboxWebApi.WebApi
+	EndGlobalSection
+EndGlobal

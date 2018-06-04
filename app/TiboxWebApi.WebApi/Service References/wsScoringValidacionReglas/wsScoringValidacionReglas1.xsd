@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.19.150.20:3000/wsScoringValidacionReglas.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" />
+  <xs:element name="ScoringValidacionReglasRechazo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="poDatosValidacion" nillable="true" type="q1:ELScoringValidacionReglasDatos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ScoringValidacionReglasRechazoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="ScoringValidacionReglasRechazoResult" nillable="true" type="q2:ELScoringValidacionReglasResultado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaClientePEP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="poDatos" nillable="true" type="q3:ELDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaClientePEPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SoftBox.Scoring.EntityLayer" minOccurs="0" name="ValidaClientePEPResult" nillable="true" type="q4:ELClientePEPResultado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

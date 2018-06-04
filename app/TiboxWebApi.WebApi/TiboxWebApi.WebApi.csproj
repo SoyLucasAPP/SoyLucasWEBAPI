@@ -1,0 +1,569 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5505700D-4C4B-4D5B-91AB-F706DD21CD73}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TiboxWebApi.WebApi</RootNamespace>
+    <AssemblyName>TiboxWebApi.WebApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.7.0.3\lib\net45\FluentValidation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LightInject, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.5.0.0\lib\net45\LightInject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LightInject.WebApi, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.WebApi.2.0.0\lib\net45\LightInject.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.WebApi.Extensions.Compression.Server, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Extensions.Compression.Server.2.0.1\lib\net45\Microsoft.AspNet.WebApi.Extensions.Compression.Server.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.WebApi.Extensions.Compression.Server.Owin, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Extensions.Compression.Server.Owin.2.0.4\lib\net45\Microsoft.AspNet.WebApi.Extensions.Compression.Server.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.1.0\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions.Compression.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Extensions.Compression.Server.2.0.1\lib\net45\System.Net.Http.Extensions.Compression.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Thinktecture.IdentityModel.Owin.BasicAuthentication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Thinktecture.IdentityModel.Owin.BasicAuthentication.1.0.1\lib\net45\Thinktecture.IdentityModel.Owin.BasicAuthentication.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Service References\wsCPD\TiboxWebApi.WebApi.wsCPD.ELCPDMatrizResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\LucasWebApi.pubxml" />
+    <None Include="Service References\wsCPD\configuration91.svcinfo" />
+    <None Include="Service References\wsCPD\configuration.svcinfo" />
+    <None Include="Service References\wsCPD\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsCPD\wsCPD1.disco" />
+    <Content Include="Service References\wsIngresoPredecido\TiboxWebApi.WebApi.wsIngresoPredecido.ELIngresoCliente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsIngresoPredecido\TiboxWebApi.WebApi.wsIngresoPredecido.ELIngresoPredecidoDemograficoResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsIngresoPredecido\TiboxWebApi.WebApi.wsIngresoPredecido.ELIngresoPredecidoRCCResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsIngresoPredecido\TiboxWebApi.WebApi.wsIngresoPredecido.ELIngresoPredecidoResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsCPD\wsCPD1.wsdl" />
+    <None Include="Service References\wsCPD\wsCPD3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsCPD\wsCPD31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsCPD\wsCPD32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsIngresoPredecido\configuration91.svcinfo" />
+    <None Include="Service References\wsIngresoPredecido\configuration.svcinfo" />
+    <None Include="Service References\wsIngresoPredecido\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsIngresoPredecido\wsIngresoPredecido1.disco" />
+    <Content Include="Service References\wsPreAprobacion\TiboxWebApi.WebApi.wsPreAprobacion.ELPreAprobacionResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsIngresoPredecido\wsIngresoPredecido1.wsdl" />
+    <None Include="Service References\wsIngresoPredecido\wsIngresoPredecido3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsIngresoPredecido\wsIngresoPredecido31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsIngresoPredecido\wsIngresoPredecido32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsPreAprobacion\configuration91.svcinfo" />
+    <None Include="Service References\wsPreAprobacion\configuration.svcinfo" />
+    <None Include="Service References\wsPreAprobacion\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsPreAprobacion\wsPreAprobacion1.disco" />
+    <Content Include="Service References\wsScoreBuro\TiboxWebApi.WebApi.wsScoreBuro.ELScoreBuroResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsPreAprobacion\wsPreAprobacion1.wsdl" />
+    <None Include="Service References\wsPreAprobacion\wsPreAprobacion3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsPreAprobacion\wsPreAprobacion31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsPreAprobacion\wsPreAprobacion32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreBuro\configuration91.svcinfo" />
+    <None Include="Service References\wsScoreBuro\configuration.svcinfo" />
+    <None Include="Service References\wsScoreBuro\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsScoreBuro\wsScoreBuro1.disco" />
+    <Content Include="Service References\wsScoreComportamiento\TiboxWebApi.WebApi.wsScoreComportamiento.ELScoreComportamientoResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsScoreBuro\wsScoreBuro1.wsdl" />
+    <None Include="Service References\wsScoreBuro\wsScoreBuro3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreBuro\wsScoreBuro31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreBuro\wsScoreBuro32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreComportamiento\configuration91.svcinfo" />
+    <None Include="Service References\wsScoreComportamiento\configuration.svcinfo" />
+    <None Include="Service References\wsScoreComportamiento\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsScoreComportamiento\wsScoreComportamiento1.disco" />
+    <Content Include="Service References\wsScoreDemografico\TiboxWebApi.WebApi.wsScoreDemografico.ELScoreDemograficoResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsScoreComportamiento\wsScoreComportamiento1.wsdl" />
+    <None Include="Service References\wsScoreComportamiento\wsScoreComportamiento3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreComportamiento\wsScoreComportamiento31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreComportamiento\wsScoreComportamiento32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreDemografico\configuration91.svcinfo" />
+    <None Include="Service References\wsScoreDemografico\configuration.svcinfo" />
+    <None Include="Service References\wsScoreDemografico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsScoreDemografico\wsScoreDemografico1.disco" />
+    <Content Include="Service References\wsScoreLenddo\TiboxWebApi.WebApi.wsScoreLenddo.ELScoreLenddoResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsScoreDemografico\wsScoreDemografico1.wsdl" />
+    <None Include="Service References\wsScoreDemografico\wsScoreDemografico3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreDemografico\wsScoreDemografico31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreDemografico\wsScoreDemografico32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreLenddo\configuration91.svcinfo" />
+    <None Include="Service References\wsScoreLenddo\configuration.svcinfo" />
+    <None Include="Service References\wsScoreLenddo\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsScoreLenddo\wsScoreLenddo1.disco" />
+    <Content Include="Service References\wsScoringBuro\TiboxWebApi.WebApi.wsScoringBuro.ELScoringBuroCuotaUtilizadaResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsScoringBuro\TiboxWebApi.WebApi.wsScoringBuro.ELScoringBuroResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsScoreLenddo\wsScoreLenddo1.wsdl" />
+    <None Include="Service References\wsScoreLenddo\wsScoreLenddo3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreLenddo\wsScoreLenddo31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoreLenddo\wsScoreLenddo32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoringBuro\configuration91.svcinfo" />
+    <None Include="Service References\wsScoringBuro\configuration.svcinfo" />
+    <None Include="Service References\wsScoringBuro\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsScoringBuro\wsScoringBuro.disco" />
+    <Content Include="Service References\wsScoringDemografico\TiboxWebApi.WebApi.wsScoringDemografico.ELScoringDemograficoResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsScoringBuro\wsScoringBuro.wsdl" />
+    <None Include="Service References\wsScoringBuro\wsScoringBuro.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoringBuro\wsScoringBuro1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoringBuro\wsScoringBuro2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoringDemografico\configuration91.svcinfo" />
+    <None Include="Service References\wsScoringDemografico\configuration.svcinfo" />
+    <None Include="Service References\wsScoringDemografico\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsScoringDemografico\wsScoringDemografico.disco" />
+    <Content Include="Service References\wsScoringValidacionReglas\TiboxWebApi.WebApi.wsScoringValidacionReglas.ELClientePEPResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\wsScoringValidacionReglas\TiboxWebApi.WebApi.wsScoringValidacionReglas.ELScoringValidacionReglasResultado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsScoringDemografico\wsScoringDemografico.wsdl" />
+    <None Include="Service References\wsScoringDemografico\wsScoringDemografico.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoringDemografico\wsScoringDemografico1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoringDemografico\wsScoringDemografico2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoringValidacionReglas\configuration91.svcinfo" />
+    <None Include="Service References\wsScoringValidacionReglas\configuration.svcinfo" />
+    <None Include="Service References\wsScoringValidacionReglas\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\wsScoringValidacionReglas\wsScoringValidacionReglas.disco" />
+    <Content Include="Service References\wsSms\TiboxWebApi.WebApi.wsSms.EnviarMensajeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\wsScoringValidacionReglas\wsScoringValidacionReglas.wsdl" />
+    <None Include="Service References\wsScoringValidacionReglas\wsScoringValidacionReglas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoringValidacionReglas\wsScoringValidacionReglas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsScoringValidacionReglas\wsScoringValidacionReglas2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\wsSms\wsSms.disco" />
+    <None Include="Service References\wsSms\configuration91.svcinfo" />
+    <None Include="Service References\wsSms\configuration.svcinfo" />
+    <None Include="Service References\wsSms\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\ConfigureInjector.cs" />
+    <Compile Include="App_Start\TokenConfiguration.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AlertaController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CatalogoCodigoController.cs" />
+    <Compile Include="Controllers\CreditoController.cs" />
+    <Compile Include="Controllers\DocumentoController.cs" />
+    <Compile Include="Controllers\EvaluacionController.cs" />
+    <Compile Include="Controllers\FlujoController.cs" />
+    <Compile Include="Controllers\LenddoController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\PersonaController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ReglaNegocioController.cs" />
+    <Compile Include="Controllers\ReporteController.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\VarNegocioController.cs" />
+    <Compile Include="Controllers\ZonaController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\SimpleAuthorizationServerProvider.cs" />
+    <Compile Include="Service References\wsCPD\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsIngresoPredecido\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsPreAprobacion\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsScoreBuro\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsScoreComportamiento\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsScoreDemografico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsScoreLenddo\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsScoringBuro\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsScoringDemografico\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsScoringValidacionReglas\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\wsSms\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Utils\ActiveDirectory.cs" />
+    <Compile Include="Utils\DocumentosReporte.cs" />
+    <Compile Include="Utils\Email.cs" />
+    <Compile Include="Utils\EvaluacionMotor.cs" />
+    <Compile Include="Utils\ReporteEmail.cs" />
+    <Compile Include="Utils\Sms.cs" />
+    <Compile Include="Utils\Utiles.cs" />
+    <Compile Include="Validators\PersonaValidator.cs" />
+    <Compile Include="Validators\ProductValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Service References\wsSms\wsSms.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TiboxWebApi.Models\TiboxWebApi.Models.csproj">
+      <Project>{9673F9D3-067D-445C-8B46-9D87826296CA}</Project>
+      <Name>TiboxWebApi.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TiboxWebApi.Repository\TiboxWebApi.Repository.csproj">
+      <Project>{39BDA918-9B10-409A-A67A-052C15331F74}</Project>
+      <Name>TiboxWebApi.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TiboxWebApi.UnitOfWork\TiboxWebApi.UnitOfWork.csproj">
+      <Project>{DE0277E0-B90E-4EF5-A4E9-A4414AEB356B}</Project>
+      <Name>TiboxWebApi.UnitOfWork</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\wsCPD\" />
+    <WCFMetadataStorage Include="Service References\wsIngresoPredecido\" />
+    <WCFMetadataStorage Include="Service References\wsPreAprobacion\" />
+    <WCFMetadataStorage Include="Service References\wsScoreBuro\" />
+    <WCFMetadataStorage Include="Service References\wsScoreComportamiento\" />
+    <WCFMetadataStorage Include="Service References\wsScoreDemografico\" />
+    <WCFMetadataStorage Include="Service References\wsScoreLenddo\" />
+    <WCFMetadataStorage Include="Service References\wsScoringBuro\" />
+    <WCFMetadataStorage Include="Service References\wsScoringDemografico\" />
+    <WCFMetadataStorage Include="Service References\wsScoringValidacionReglas\" />
+    <WCFMetadataStorage Include="Service References\wsSms\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2845</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:81/WebApiOnline</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
